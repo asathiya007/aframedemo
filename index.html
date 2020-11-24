@@ -44,14 +44,14 @@
     <a-camera look-controls-enabled="false" wasd-controls-enabled="false" position="0 1.5 0"></a-camera>
     <a-entity 
       class="box-component" 
-      box position="0 0 -4"
-      trigger-volume="colliders: #buzAv; size: {x: 2, y: 2, z: 2}; target: .box-component;"
+      box="position: -2, 0, -7"
+      trigger-volume="colliders: #buzAv; target: .box-component; threshold: 4"
     ></a-entity>
     <a-assets>
       <a-asset-item id="buzz" src="./Buzz.glb" crossorigin="anonymous"></a-asset-item>
     </a-assets>
     <a-entity id="buzAv" buzz gltf-model="#buzz"
-      shadow="cast: true; receive: true;" position="8 0 -10" rotation="0 -60 0" animation-mixer></a-entity>
+      shadow="cast: true; receive: false;" position="5 0 -7" rotation="0 -60 0" scale="0.5 0.5 0.5" animation-mixer></a-entity>
   </a-scene>
   <script src="post-box-script.js"></script>
   <script src="buttons.js"></script>

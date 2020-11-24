@@ -3,7 +3,8 @@ AFRAME.registerComponent('box', {
         width: {type: 'number', default: 1},
         height: {type: 'number', default: 1},
         depth: { type: 'number', default: 1 },
-        color: {type: 'color', default: '#AAA'}
+        color: {type: 'color', default: '#AAA'},
+        position: {type: 'array', default: [0, 0, 0]}
     },
 
     init: function () {
@@ -21,6 +22,11 @@ AFRAME.registerComponent('box', {
 
         // set mesh on entity 
         el.setObject3D('mesh', this.mesh);
+
+        // apply position
+        el.object3D.position.x = this.data.position[0];
+        el.object3D.position.y = this.data.position[1];
+        el.object3D.position.z = this.data.position[2]; 
 
         // create event handler
         this.eventHandlerMove = function (e) {
