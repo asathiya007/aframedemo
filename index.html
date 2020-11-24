@@ -6,6 +6,7 @@
   <script src="box-component.js"></script>
   <script src="./aframe-extras.js"></script>
   <script src="./buzz-component.js"></script>
+  <script src="trigger-volume.js"></script>
   <style>
     a-scene, video {
       height:100%;
@@ -41,7 +42,11 @@
   <video autoplay></video>
   <a-scene>
     <a-camera look-controls-enabled="false" wasd-controls-enabled="false" position="0 1.5 0"></a-camera>
-    <a-entity class="box-component" box position="0 0 -4"></a-entity>
+    <a-entity 
+      class="box-component" 
+      box position="0 0 -4"
+      trigger-volume="colliders: #buzAv; size: {x: 2, y: 2, z: 2}; target: .box-component;"
+    ></a-entity>
     <a-assets>
       <a-asset-item id="buzz" src="./Buzz.glb" crossorigin="anonymous"></a-asset-item>
     </a-assets>
