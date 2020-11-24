@@ -2,14 +2,14 @@ const colliderWorldPositionVec = new THREE.Vector3();
 const targetWorldPositionVec = new THREE.Vector3(); 
 let collisionDetectedAlready = false; 
 
-AFRAME.registerComponent("trigger-volume", {
+AFRAME.registerComponent("collision-detector", {
   schema: {
     colliders: { type: "selectorAll" },
     target: { type: "selector" },
     threshold: {type: "int", default: 3}
   },
   init() {
-    console.log("Initialized trigger volume"); 
+    console.log("Initialized collision detector"); 
   },
   tick() {
     if (!this.data.target) return;

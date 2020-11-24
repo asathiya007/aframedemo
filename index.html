@@ -6,7 +6,7 @@
   <script src="box-component.js"></script>
   <script src="./aframe-extras.js"></script>
   <script src="./buzz-component.js"></script>
-  <script src="trigger-volume.js"></script>
+  <script src="collision-detector.js"></script>
   <style>
     a-scene, video {
       height:100%;
@@ -45,7 +45,7 @@
     <a-entity 
       class="box-component" 
       box="position: -2, 0, -7"
-      trigger-volume="colliders: #buzAv; target: .box-component; threshold: 4"
+      collision-detector="colliders: #buzAv; target: .box-component; threshold: 4"
     ></a-entity>
     <a-assets>
       <a-asset-item id="buzz" src="./Buzz.glb" crossorigin="anonymous"></a-asset-item>
