@@ -4,5 +4,4 @@ It features a box and a 3D model of Buzz, Georgia Tech's mascot, over a camera v
 
 It also features a collision detection component. 
 
-Try it out with the following command: 
-$ npm install && npm start
+Try it out by running the following command on the command line while in the root directory of this project: `npm install && npm start`
